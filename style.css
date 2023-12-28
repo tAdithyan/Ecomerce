@@ -433,4 +433,27 @@ right: 1rem;
   font-size: 2rem;
   display: block;
 }
-
+.contact form{
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+.contact form .inputbox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .inputbox input,.contact form textarea{
+  padding: 1rem;
+  font-size: 1.7rem;
+  background-color:#f7f7f7;
+  text-transform: none;
+  margin: 1rem 0;
+  border: .1rem solid #0003;
+  width: 49%;
+}
+.contact form textarea{
+  height: 20rem;
+  resize: none;
+  width: 10%;
+}
