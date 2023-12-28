@@ -385,5 +385,52 @@ right: 1rem;
 }
 
 
+.deal{
+  background: url(./images/deals.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.deal .content{
+  max-width: 50rem;
 
+}
+.deal .content .title{
+  font-size: 4rem;
+  color: var(--black);
+}
+.deal .content p{
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  color: #333;
+}
+.deal .content .count-down{
+  display: flex;
+  gap: 1rem;
+  padding: 5rem 0;
+}
+.deal .content .count-down .box{
+  width:9rem;
+  text-align: center;
+  box-shadow: 0 .5rem 1rem #000.1;
+  border: 1px solid #000;
+
+}
+.deal .content .count-down .box h3{
+  color: var(--black);
+  background-color: white;
+  height: 7rem;
+  line-height: 7rem;
+  width: 100%;
+  font-size: 5rem;
+}
+.deal .content .count-down .box span{
+  background: var(--black);
+  color: white;
+  width: 100%;
+  padding: .5rem;
+  font-size: 2rem;
+  display: block;
+}
 
