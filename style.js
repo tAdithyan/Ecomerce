@@ -15,3 +15,18 @@ window.onscroll = () => {
     header.classList.remove("active");
   }
 };
+
+
+
+
+
+let countDate = new Date('june1, 2022, 00:00:00').getTime();
+function CountDown(){
+  let now=new Date().getTime();
+  gap=countDate-now;
+  let second=1000;
+  let minute=second*60;
+  let hour=minute*60
+  let day=hour*24
+
+}
