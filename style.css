@@ -18,11 +18,17 @@
   background-color: var(--green);
   color: white;
 }
+body{
+  height: 900px;
+}
 html{
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 6.5rem;
   scroll-behavior: smooth;
+}
+section{
+  padding: 2rem 9%;
 }
 .header-1{
   background-color: rgb(244, 243, 243);
@@ -75,6 +81,13 @@ html{
   position: relative;
 
 }
+.header-2.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 .header-2 a{
   padding: .5rem 1.5rem;
   font-size: 2rem;
@@ -118,9 +131,9 @@ html{
   #menu-bar{
     display: initial;
   }
-  .header-1,.navbar{
+  .header-1 .navbar{
     position: absolute;
-    top: 100%;
+    top:100%;
     left: 0;
     right: 0;
     background-color: var(--black);
@@ -129,7 +142,10 @@ html{
     
 
   }
-  .header-1,.navbar a{
+  .header-1.navbar.active{
+    display: initial;
+  }
+  .header-1 .navbar a{
     font-size: 2.5rem;
     display: block;
     text-align: center;
@@ -149,4 +165,43 @@ html{
   .logo{
     font-size: 4rem;
   }
+}
+.home
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home .image{
+  flex: 1 1 40rem;
+  padding-top: 5rem;
+}
+.home .image img{
+  width: 100%;
+}
+.home .content{
+  flex: 1 1 40rem;
+}
+.home .content span{
+  font-size: 6rem;
+  color:gray
+}
+.home .content h2{
+  color: var(--black);
+}
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--green);
+  color: white;
+  padding: .8rem 3rem;
+  font-size: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #fff;
+  color: var(--green);
+  border: 1px solid var(--green);
 }
