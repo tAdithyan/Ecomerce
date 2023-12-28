@@ -239,3 +239,14 @@ gap: 1.5rem;
 .banner-container .banner:hover img{
   transform: scale(1.1)rotate(-2deg);
 }
+.heading{
+  text-align: center;
+  color: var(--black);
+  text-transform:uppercase;
+  padding: 1rem;
+  font-size: 3.5rem;
+}
+.heading span{
+  color:var(--green);
+  text-transform:uppercase;
+}
