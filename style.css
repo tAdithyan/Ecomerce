@@ -205,3 +205,37 @@ section{
   color: var(--green);
   border: 1px solid var(--green);
 }
+
+
+
+.banner-container{
+  display: flex;
+gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.banner-container .banner{
+  position: relative;
+  flex: 1 1 40rem;
+  height: 25rem;
+  overflow: hidden;
+  
+}
+.banner-container .banner img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner-container .banner .content{
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: rotateY(-50%);
+}
+
+.banner-container .banner .content h3{
+  font-size: 3rem;
+  color: var(--black);
+}
+.banner-container .banner:hover img{
+  transform: scale(1.1)rotate(-2deg);
+}
