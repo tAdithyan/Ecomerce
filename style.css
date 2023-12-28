@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;700&display=swap');
+:root{
+  --green:#82de3c;
+  --black:#000000;
+}
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform:capitalize;
+  transition: all .2s linear-;
+}
+*::selection{
+  background-color: var(--green);
+  color: white;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+.header-1{
+  background-color: rgb(244, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 2rem 9%;
+
+}
+.header-1 .search-box-container{
+  display: flex;
+  height: 5rem;
+
+}
+.header-1 .search-box-container #search-box{
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #333;
+  border: 1px  solid rgba(0,0,0,.3);
+  text-transform: none;
+
+}
+.header-1 .search-box-container label{
+  height: 100%;
+  width: 8rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  color: #fff;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header-1 .search-box-container label:hover{
+  background-color:white;
+  color: var(--green);
+  border: 1px solid var(--green);
+
+}
+.header-2{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 2rem 9%;
+  box-shadow: 0 .5rem 1rem var(--black) ;
+  position: relative;
+
+}
+.header-2 a{
+  padding: .5rem 1.5rem;
+  font-size: 2rem;
+  border-radius:.5rem ;
+  color: var(--black);
+}
+.header-2 a:hover{
+  background-color: var(--green);
+  color: whitesmoke;
+}
+.header-2 .icons a{
+  font-size: 3rem;
+  color: var(--black);
+  padding-left: 1rem;
+
+}
+.header-2 .icons a:hover{
+  color: var(--green);
+  background-color: white;
+}
+#menu-bar{
+  font-size: 3rem;
+  border-radius: .5rem;
+  border: .1rem solid var(--black);
+  padding: .8rem 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+@media(max-width:1200px){
+  html{
+    font-size: 55%;
+  }
+}
+@media(max-width:990px){
+  .header-1,.header-2{
+    padding: 2rem;
+  }
+}
+@media(max-width:768px){
+  #menu-bar{
+    display: initial;
+  }
+  .header-1,.navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    padding: 1rem 0;
+    display: none;
+    
+
+  }
+  .header-1,.navbar a{
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+}
+@media(max-width:990px){
+  html{
+    font-size: 50%;
+  }
+  .header-1,.search-box-container{
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .logo{
+    font-size: 4rem;
+  }
+}
