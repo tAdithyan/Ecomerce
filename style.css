@@ -19,7 +19,7 @@
   color: white;
 }
 body{
- height: 950vh;
+ height: 950px;
 }
 html{
   font-size: 62.5%;
@@ -245,6 +245,7 @@ gap: 1.5rem;
   text-transform:uppercase;
   padding: 1rem;
   font-size: 3.5rem;
+  margin-bottom: 2rem;
 }
 .heading span{
   color:var(--green);
@@ -435,7 +436,7 @@ right: 1rem;
 }
 .contact form{
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid #000;
 }
 .contact form .inputbox{
@@ -455,5 +456,40 @@ right: 1rem;
 .contact form textarea{
   height: 20rem;
   resize: none;
-  width: 10%;
+  width: 100%;
 }
+.newsletter{
+  background: url(./images/pexels-pixabay-248420.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+ text-align: center;
+ padding: 5rem 2rem;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+ }
+ .newsletter h3{
+  font-size: 3rem;
+  color: var(--black);
+ }
+ .newsletter  form{
+  max-height: 55rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1..5rem;
+  background: #000.1;
+
+ }
+ .newsletter form .box{
+  width: 100%;
+  padding: .7rem 1.5rem;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+
+ }
+ .newsletter form .btn{
+  margin-top: 0;
+ }
