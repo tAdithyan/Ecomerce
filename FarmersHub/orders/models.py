@@ -15,11 +15,11 @@ class Order(models.Model):
                  (ORDER__PROCESED,"ORDER__PROCESED"),
                  (ORDER_REJECTED,"ORDER_REJECTED"))
   order_Status=models.IntegerField(choices=STATUS_CHOICE,default=CART_STAGE)
-  owner=models.ForeignKey(Customer,on_delete=models.SET_NULL,related_name='orders')
+  owner=models.ForeignKey(Customer,on_delete=models.SET_NULL,related_name='orders',null=True)
   delete_status=models.IntegerField(choices=DELETE_CHOICES,default=LIVE)
   created_at=models.DateTimeField(auto_now_add=True)
   updated_at=models.DateTimeField(auto_now=True)
 class OrderedIteam(models.Model):
-    procuct=models.ForeignKey(product,related_name='added_carts',on_delete=models.SET_NULL)
+    procuct=models.ForeignKey(product,related_name='added_carts',on_delete=models.SET_NULL,null=True)
     quantity=models.IntegerField(default=1)
     owner=models.ForeignKey(Order,on_delete=models.CASCADE,related_name="added_iteams")
