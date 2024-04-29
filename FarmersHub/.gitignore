@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+*.sqlite3
+*.db
+
+# Static files
+staticfiles/
+*.pyc
+
+# Media files
+media/
+
+# Virtual environment
+venv/
+.env
+
+# IDE specific files
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
