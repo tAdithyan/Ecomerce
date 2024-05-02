@@ -12,6 +12,12 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.home, name='index'),
+    path('products/', views.products, name='products'),
+    path('productsdetails/', views.product_details, name='product_details'),
+    path('Cart/', views.cart, name='cart'),
+    path('Account/', views.Account, name='Account'),
+
+
 
 ]
 

@@ -31,11 +31,7 @@ a{
     text-decoration: none;
     color: #555;
 }
-a:hover{
-    color: white;
-    cursor: pointer;
-    transition: transform 0.5s;
-}
+
 p{
     color: #555;
 }
@@ -390,7 +386,7 @@ th:last-child{
 /* Account page */
 .account-page{
     padding: 50px 0;
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff, #7fb825);
 }
 .form-container{
     background: #fff;
@@ -449,7 +445,7 @@ form a{
 #Indicator{
     width: 100px;
     border: none;
-    background: #ff523b;
+    background: #7fb825;
     height: 3px;
     margin-top: 8px;
     transform: translateX(100px);
