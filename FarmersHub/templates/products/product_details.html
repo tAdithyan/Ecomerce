@@ -27,7 +27,7 @@
                   <li><a href="{% url 'Account' %}">Account</a></li>
                 </ul>
             </nav>
-            <a href="cart.html"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
+            <a href="{% url 'cart' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
             <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
@@ -36,43 +36,28 @@
     <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-                <img src="images/gallery-1.jpg" width="100%" id="ProductImg">
+                <img src="{{ product.image.url }}" width="100%" id="ProductImg">
 
-                <div class="small-img-row">
-                    <div class="small-img-col">
-                        <img src="images/gallery-1.jpg" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="images/gallery-2.jpg" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="images/gallery-3.jpg" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="images/gallery-4.jpg" width="100%" class="small-img">
-                    </div>
-                </div>
 
             </div>
             <div class="col-2">
-                <p>Home / T-Shirt</p>
-                <h1>Red Printed T-Shirt by HRX</h1>
-                <h4>$50.00</h4>
+                <p></p>
+                <h1>{{ product.title }}</h1>
+                <h4>${{ product.price }}</h4>
                 <select>
                     <option>Select Size</option>
-                    <option>XXL</option>
-                    <option>XL</option>
-                    <option>L</option>
-                    <option>M</option>
-                    <option>S</option>
+                    <option>.5kg</option>
+                    <option>2kg</option>
+                    <option>4kg</option>
+                    <option>6kg</option>
+                    <option>8kg</option>
                 </select>
-                <input type="number" value="1">
+                <input type="number" value="1" max="10" min="1">
                 <a href="" class="btn">Add To Cart</a>
 
                 <h3>Product Details <i class="fa fa-indent"></i></h3>
                 <br>
-                <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of
-                    shorts for your morning workout or a denims for an evening out with the guys.</p>
+                <p>{{ product.description }}</p>
             </div>
         </div>
     </div>

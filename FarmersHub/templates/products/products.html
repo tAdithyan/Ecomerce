@@ -46,7 +46,7 @@
             {% for product in product_chunks %}
               
             <div class="col-4">
-                <a href="{% url 'product_details' %}"><img src="{{ product.image.url }}"></a>
+                <a href="{% url 'product_details' product.id %}"><img src="{{ product.image.url }}"></a>
                 <h4>{{ product.title }}</h4>
                
                 <p>${{product.price}}</p>
@@ -60,7 +60,7 @@
        
         <div class="page-btn">
             {% if products.has_previous %}
-            <a href="?page={{ products.previous_page_number }}"><span><<<</span></a>
+            <a href="?page={{ products.previous_page_number }}"><span><i class="fa-solid fa-backward"></i></span></a>
 
             {% endif %}
             {% for i in products.paginator.page_range %}
@@ -69,7 +69,7 @@
             <a href="?page={{i}}"><span>{{i}}</span></a>
             {% endfor %}
             {% if products.has_next %}
-            <a href="?page={{ products.next_page_number }}"><span>>>></span></a>
+            <a href="?page={{ products.next_page_number }}"><span><i class="fa-solid fa-forward"></i></span></a>
 
             {% endif %}
         </div>
@@ -117,7 +117,7 @@
     </div>
 
     <!-- javascript -->
-
+    <script src="https://kit.fontawesome.com/4d8456b076.js" crossorigin="anonymous"></script>
     <script>
         var MenuItems = document.getElementById("MenuItems");
         MenuItems.style.maxHeight = "0px";

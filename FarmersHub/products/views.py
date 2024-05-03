@@ -17,8 +17,12 @@ def products(request):
     'products': product_list }
   return render(request,'products/products.html',context)
 
-def product_details(request):
-  return render(request,'products/product_details.html')
+def product_details(request,pk):
+  Product=product.objects.get(pk=pk)
+  context={
+    'product':Product
+  }
+  return render(request,'products/product_details.html',context)
 
 
 def cart(request):
