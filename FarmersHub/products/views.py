@@ -4,7 +4,15 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def home(request):
-  return render(request,'home/index.html')
+  featured_products=product.objects.order_by('priority')[:4]
+  latest_products=product.objects.order_by('-id')[:4]
+  context={
+    'featured_products':featured_products,
+    'latest_products':latest_products
+  }
+
+
+  return render(request,'home/index.html',context)
 
 def products(request):
   page=1
